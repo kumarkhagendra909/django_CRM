@@ -1,0 +1,67 @@
+First i just installed mysql connector module 
+1. mysql-connector
+2. mysql
+3. mysql-connector-python
+Second create a virtual environment, in my case virtual env named as 'virt'
+Third installing the django module 
+
+Fourth create django project named as besporecord, for this terminal command is used i.e.
+django-admin startproject besporecord
+here besporecord is our project name 
+
+after the above terminal command run this command " python manage.py startapp website " this commad will create a new app for our django project named website
+
+now we need to do some changes in besporecord/settings.py 
+1. settings of database platform and adding the user name, host, password to connect with the database for our project :
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'besporecord', # name of the database i want to connect
+        'USER': 'newuser', # mysql username 
+        'PASSWORD': 'newuser@123', # user password
+        'HOST': 'localhost', # localhost means not doing with any real time server
+        'PORT': '3306', # port number
+    
+2. add the app website in Installedapps
+
+
+Microsoft Windows [Version 10.0.19045.3570]
+(c) Microsoft Corporation. All rights reserved.
+
+(virt) D:\DJANGO\CRM\virt>cd..
+
+(virt) D:\DJANGO\CRM>python config.py
+C:\Users\hp\AppData\Local\Programs\Python\Python310\python.exe: can't open file 'D:\\DJANGO\\CRM\\config.py': [Errno 2] No such file or directory
+
+(virt) D:\DJANGO\CRM>python .\config.py
+C:\Users\hp\AppData\Local\Programs\Python\Python310\python.exe: can't open file 'D:\\DJANGO\\CRM\\config.py': [Errno 2] No such file or directory
+
+(virt) D:\DJANGO\CRM>python besporecord\config.py
+database connected
+connection closed
+
+(virt) D:\DJANGO\CRM>cd besporecord
+
+(virt) D:\DJANGO\CRM\besporecord>dir
+(virt) D:\DJANGO\CRM\besporecord>cd besporecord
+
+(virt) D:\DJANGO\CRM\besporecord\besporecord>dir
+
+Directory of D:\DJANGO\CRM\besporecord\besporecord
+
+(virt) D:\DJANGO\CRM\besporecord\besporecord>cd..
+
+(virt) D:\DJANGO\CRM\besporecord>dir
+
+Directory of D:\DJANGO\CRM\besporecord
+
+(virt) D:\DJANGO\CRM\besporecord>python manage.py migrate
+(virt) D:\DJANGO\CRM\besporecord>python manage.py createsuperuser
+Username (leave blank to use 'hp'):
+Password:
+Password (again):
+Superuser created successfully.
+
+(virt) D:\DJANGO\CRM\besporecord>python manage.py
+
+(virt) D:\DJANGO\CRM\besporecord>python manage.py runserver
+Starting development server at http://127.0.0.1:8000/
+
