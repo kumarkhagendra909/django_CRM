@@ -65,3 +65,8 @@ Superuser created successfully.
 (virt) D:\DJANGO\CRM\besporecord>python manage.py runserver
 Starting development server at http://127.0.0.1:8000/
 
+
+do check all migration 
+then git commit the project with initials changes till now what we have done 
+
+creating a urls.py file in website app, include it with the besporeco...
