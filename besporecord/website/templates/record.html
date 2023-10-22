@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Measurement Details</h1>
+<div class="card">
+    <div class="card-header">
+        <h3>{{customer_record.first_name}} {{customer_record.last_name}}</h3>
+    </div>
+    <div class="card-footer">
+        <b>Item: </b>
+        {{customer_record.item}}
+    </div>
+    <div class="card-body">
+        <strong>Neck:</strong> {{customer_record.neck}}<br />
+        <strong>Shoulder:</strong> {{customer_record.shoulder}}<br />
+        <strong>Chest:</strong> {{customer_record.chest}}<br />
+        <strong>Natural Waist:</strong> {{customer_record.natural_waist}}<br />
+        <strong>Trouser Waist:</strong> {{customer_record.trouser_waist}}<br />
+        <strong>Hip:</strong> {{customer_record.hip}}<br />
+        <strong>Bicep:</strong> {{customer_record.bicep}}<br />
+        <strong>Full Sleeve Length:</strong> {{customer_record.full_sleeve_length}}<br />
+        <strong>Half Sleeve Length:</strong> {{customer_record.half_sleeve_length}}<br />
+        <strong>Shirt Length:</strong> {{customer_record.shirt_length}}<br />
+        <strong>Jacket Length:</strong> {{customer_record.jacket_length}}<br />
+        <strong>Nehru Length:</strong> {{customer_record.nehru_length}}<br />
+        <strong>Waist Coat Length:</strong> {{customer_record.waist_coat_length}}<br />
+        <strong>Kurta Length:</strong> {{customer_record.kurta_length}}<br />
+        <strong>Trouser Length:</strong> {{customer_record.trouser_length}}<br />
+        <strong>Full Crotch:</strong> {{customer_record.full_crotch}}<br />
+        <strong>Thigh:</strong> {{customer_record.thigh}}<br />
+        <strong>Bottom:</strong> {{customer_record.bottom}}<br />
+        <strong>Advance:</strong> {{customer_record.advance_pay}}<br />
+        <strong>Final:</strong> {{customer_record.final_payment}}<br />
+        <strong>Balance:</strong> {{customer_record.balance}}<br />
+        <strong>Order Date:</strong> {{customer_record.created_at}}<br />
+        <strong>Trial Date:</strong> {{customer_record.trial_date}}<br />
+        <strong>Delivery Date:</strong> {{customer_record.delivery_date}}<br />
+    </div>
+    <div class="card-body bg-dark text-light">
+        <H4>Quality is the key of customer 😊 and 🤝</H4><br />
+    </div>
+    <br>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+    <a href="{% url 'new_record' %}" class="btn btn-success">New Record</a>
+    <a href="{% url 'update_record' customer_record.id %}" class="btn btn-warning">Update Record</a>
+    <a href="{% url 'delete_record' customer_record.id %}" class="btn btn-danger">Delete Record</a>
+</div>
+<br>
+{% endblock %}
